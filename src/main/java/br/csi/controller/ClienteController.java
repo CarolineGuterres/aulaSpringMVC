@@ -20,7 +20,7 @@ public class ClienteController {
 	public String adiciona (Cliente cliente){
 		boolean retorno= new ClienteDao().adicionar(cliente);
 	     if(retorno){
-	    	 return "cliente";
+	    	 return "forward:listaClientes";
 	     }else{
 	    	 return "erro";
 	     }
